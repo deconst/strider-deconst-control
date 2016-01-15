@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/deconst/strider-deconst-control/issues"
   },
-  "homepage": "https://github.com/deconst/strider-deconst-control"
+  "homepage": "https://github.com/deconst/strider-deconst-control",
+  "strider": {
+    "id": "deconst-control",
+    "type": "job",
+    "title": "Deconst Control",
+    "webapp": "webapp.js",
+    "worker": "worker.js",
+    "icon": "icon.png"
+  }
 }
