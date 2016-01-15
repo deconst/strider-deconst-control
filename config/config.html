@@ -1,0 +1,37 @@
+<h2>
+  Deconst Control Repository
+</h2>
+
+<div class="form-group">
+  <label for="content-service-url" class="bold-label">Content Service URL</label>
+  <p class="help-text">
+    Base URL of the content service endpoint for this Deconst cluster.
+  </p>
+  <input type="text" id="content-service-url" ng-model="config.contentServiceURL" ng-blur="save()" placeholder="https://...:9000/">
+
+  <label for="content-service-apikey" class="bold-label">Content Service Admin API Key</label>
+  <p class="help-text">
+    API key issued by the content service. Must have admin rights.
+  </p>
+  <input type="password" id="content-service-apikey" ng-model="config.contentServiceAdminAPIKey" ng-blur="save()">
+
+  <label class="bold-label inline-label">
+    <input type="checkbox" class="inline-checkbox" ng-model="config.verbose" ng-change="save()"> Verbose
+  </label>
+  <p class="help-text">
+    Emit verbose logging messages during content preparation.
+  </p>
+
+  <label class="bold-label inline-label">
+    <input type="checkbox" class="inline-checkbox" ng-model="config.contentServiceTLSVerify" ng-change="save()"> Verify TLS Connections
+  </label>
+  <p class="help-text">
+    Enable TLS verification for connections to the content service.
+    <span class="danger">
+      <i class="fa fa-exclamation-triangle"></i>
+      Danger: this setting impacts the security of your communications with the Deconst cluster and
+      risks leaking your API key. Only disable this setting in non-production environments.
+      <i class="fa fa-exclamation-triangle"></i>
+    </span>
+  </p>
+</div>
