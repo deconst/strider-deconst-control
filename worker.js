@@ -1,11 +1,18 @@
 var Toolbelt = require('./lib/toolbelt').Toolbelt;
 var entry = require('./lib/entry');
 
-exports.init = function (config, job, context, callback) {
-  var toolbelt = new Toolbelt(config, job, context);
+exports.init = function (config, job, jobContext, callback) {
+  callback(null, {
+    env: {},
+    path: [],
 
-  var err = toolbelt.connectToGitHub();
-  if (err) return callback(err);
+    deploy: function (phaseContext, cb) {
+      var toolbelt = new Toolbelt(config, job, jobContext, phaseContext);
 
-  entry.prepareControlRepository(toolbelt, callback);
+      var err = toolbelt.connectToGitHub();
+      if (err) return callback(err);
+
+      entry.prepareControlRepository(toolbelt, callback);
+    }
+  });
 };
