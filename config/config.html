@@ -15,6 +15,19 @@
   </p>
   <input type="password" id="content-service-apikey" ng-model="config.contentServiceAdminAPIKey" ng-blur="save()">
 
+  <label for="slack-webhook-url" class="bold-label">Slack Webhook URL</label>
+  <p class="help-text">
+    <em>Optional.</em> <a href="https://my.slack.com/services/new/incoming-webhook">Incoming webhook</a>
+    used to configure Slack notifications.
+  </p>
+  <input type="text" id="slack-webhook-url" ng-model="config.slackWebhookURL" ng-blur="save()" placeholder="https://hook.slack/services/etc">
+
+  <label for="slack-channel" class="bold-label">Slack Channel</label>
+  <p class="help-text">
+    <em>Optional.</em> Channel to use for Slack notifications.
+  </p>
+  <input type="text" id="slack-channel" ng-model="config.slackChannel" ng-blur="save()" placeholder="#general">
+
   <label class="bold-label inline-label">
     <input type="checkbox" class="inline-checkbox" ng-model="config.verbose" ng-change="save()"> Verbose
   </label>
