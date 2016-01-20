@@ -9,9 +9,6 @@ exports.init = function (config, job, jobContext, callback) {
     deploy: function (phaseContext, cb) {
       var toolbelt = new Toolbelt(config, job, jobContext, phaseContext);
 
-      var err = toolbelt.connectToGitHub();
-      if (err) return cb(err);
-
       entry.prepareControlRepository(toolbelt, function (err) {
         cb(err, true);
       });
