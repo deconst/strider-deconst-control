@@ -10,9 +10,11 @@ exports.init = function (config, job, jobContext, callback) {
       var toolbelt = new Toolbelt(config, job, jobContext, phaseContext);
 
       var err = toolbelt.connectToGitHub();
-      if (err) return callback(err);
+      if (err) return cb(err);
 
-      entry.prepareControlRepository(toolbelt, callback);
+      entry.prepareControlRepository(toolbelt, function (err) {
+        cb(err, true);
+      });
     }
   });
 };
