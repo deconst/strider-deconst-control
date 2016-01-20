@@ -12,6 +12,12 @@ module.exports = {
       type: Boolean,
       default: true
     },
+    slackWebhookURL: {
+      type: String
+    },
+    slackChannel: {
+      type: String
+    },
     verbose: {
       type: Boolean,
       default: false
