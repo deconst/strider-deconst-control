@@ -6,9 +6,9 @@ Job plugin for [Strider CD](https://github.com/Strider-CD/strider) that:
 2. Reads a `content-repository.json` file from the root directory.
 3. Provision a Strider job using the [Deconst content plugin](https://github.com/deconst/strider-deconst-content) for each content repository described there that doesn't already exist.
 
-## `content-repository.json` format
+## `content-repositories.json` format
 
-The `content-repository.json` file must contain the following JSON:
+The `content-repositories.json` file must contain the following JSON:
 
 ```json
 [
