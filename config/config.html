@@ -28,6 +28,24 @@
   </p>
   <input type="text" id="slack-channel" ng-model="config.slackChannel" ng-blur="save()" placeholder="#general">
 
+  <label for="staging-presenter-url" class="bold-label">Staging Presenter URL</label>
+  <p class="help-text">
+    Base URL of the staging server.
+  </p>
+  <input type="text" id="staging-presenter-url" ng-model="config.stagingPresenterURL" ng-blur="save()" placeholder="https://staging...">
+
+  <label for="staging-content-service-url" class="bold-label">Staging Content Service URL</label>
+  <p class="help-text">
+    Base URL of the staging content service for this Deconst cluster.
+  </p>
+  <input type="text" id="staging-content-service-url" ng-model="config.stagingContentServiceURL" ng-blur="save()" placeholder="https://content.staging...">
+
+  <label for="staging-admin-key" class="bold-label">Staging Admin API Key</label>
+  <p class="help-text">
+    API key issued by the staging content service. Must have admin rights.
+  </p>
+  <input type="password" id="staging-admin-key" ng-model="config.stagingContentServiceAdminAPIKey" ng-blur="save()">
+
   <label class="bold-label inline-label">
     <input type="checkbox" class="inline-checkbox" ng-model="config.verbose" ng-change="save()"> Verbose
   </label>
