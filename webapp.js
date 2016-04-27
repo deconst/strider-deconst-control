@@ -1,4 +1,4 @@
-var toolbelt = require('./lib/toolbelt');
+var extensions = require('./lib/extensions');
 
 module.exports = {
   config: {
@@ -36,6 +36,6 @@ module.exports = {
   routes: function (app, context) {
     // We don't actually register any routes, but we *do* take the opportunity to yoink references
     // to internal Strider things.
-    toolbelt.rememberExtensions(context);
+    extensions.remember(context);
   }
 };
