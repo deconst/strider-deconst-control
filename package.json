@@ -33,6 +33,7 @@
     "async": "1.5.2",
     "lodash": "4.11.1",
     "ssh-keypair": "2.0.0",
+    "strider-deconst-common": "0.0.3",
     "walk": "2.3.9"
   }
 }
