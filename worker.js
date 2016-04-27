@@ -11,7 +11,7 @@ exports.init = function (config, job, jobContext, callback) {
 
       if (hadError(toolbelt.connectToDocker()), cb) return;
       if (hadError(toolbelt.connectToGitHub()), cb) return;
-      if (hadError(toolbelt.connectToContentService(true), cb) return;
+      if (hadError(toolbelt.connectToContentService(true), cb)) return;
 
       entry.prepareControlRepository(toolbelt, function (err) {
         if (hadError(err, cb)) return;
