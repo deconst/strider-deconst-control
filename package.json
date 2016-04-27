@@ -4,6 +4,7 @@
   "description": "Deconst control repository build for Strider CD",
   "main": "index.js",
   "scripts": {
+    "format": "standard",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -35,5 +36,8 @@
     "ssh-keypair": "2.0.0",
     "strider-deconst-common": "0.0.3",
     "walk": "2.3.9"
+  },
+  "devDependencies": {
+    "standard": "^6.0.8"
   }
 }
