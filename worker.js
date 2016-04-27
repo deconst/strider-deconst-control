@@ -9,12 +9,13 @@ exports.init = function (config, job, jobContext, callback) {
     deploy: function (phaseContext, cb) {
       var toolbelt = new Toolbelt(config, job, jobContext, phaseContext);
 
-      if (hadError(toolbelt.connectToDocker()), cb) return
-      if (hadError(toolbelt.connectToGitHub()), cb) return
-      if (hadError(toolbelt.connectToContentService(true), cb) return
+      if (hadError(toolbelt.connectToDocker()), cb) return;
+      if (hadError(toolbelt.connectToGitHub()), cb) return;
+      if (hadError(toolbelt.connectToContentService(true), cb) return;
 
       entry.prepareControlRepository(toolbelt, function (err) {
-        cb(err, true);
+        if (hadError(err, cb)) return;
+        cb(null, true);
       });
     }
   });
