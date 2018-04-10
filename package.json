@@ -34,7 +34,7 @@
     "async": "2.6.0",
     "lodash": "4.17.5",
     "ssh-keypair": "2.0.0",
-    "strider-deconst-common": "0.0.3",
+    "strider-deconst-common": "0.0.4",
     "walk": "2.3.13"
   },
   "devDependencies": {
